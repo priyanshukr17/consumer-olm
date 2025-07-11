@@ -32,7 +32,7 @@ def update_order(reference_id, lat, lng, accuracy_level):
                 order_obj.pickup_info_latitude = lat
                 order_obj.pickup_info_longitude = lng
 
-            order_obj.accuracy_level = accuracy_level
+            order_obj.lat_long_accuracy_level = accuracy_level
             order_obj.save(using='orders_db')
         logger.info(
                 f"LM_CONSUMER_UPDATION_LOGS : - {reference_id} - " )
